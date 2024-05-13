@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam Stream</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two equal columns */
+            gap: 20px; /* Adjust the gap as needed */
+        }
+        #video_container {
+            grid-column: 1; /* Video feed column */
+        }
+        #info_container {
+            grid-column: 2; /* Information column */
+        }
+    </style>
+</head>
+<body>
+    <div id="video_container">
+        <img id="video_feed" src="{{ url_for('video_feed') }}" alt="Webcam Stream">
+    </div>
+    <div id="video_container" width = "400" height=" 220">
+        <img id="origianl_feed" src="{{ url_for('original_feed') }}" alt="Webcam Stream">
+    </div>
+    <div id="info_container">
+        <p id="info_paragraph"></p>
+    </div>
+
+</body>
+</html>
